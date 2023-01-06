@@ -10,7 +10,9 @@ main 納品用
 ### 「福祉moverリンク先」で、「外部で管理しているIDを APIで検索」をするときに使用するAPIの情報を貼っていただけますでしょうか。
 
 https://ota.mws-hidaka.com/mover/public/test/user/passenger?userId={userId}
+
 ID : user01
+
 PW : QX8dRntuKabS
 
 https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?userId=10
@@ -36,10 +38,12 @@ https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?
 https://mover.sao-jp.com/test/web/user/demanduser/demandkm01a.php?userId={passengerId}
 
 https://DT10:12345@mover.sao-jp.com/test/web/user/demanduser/demandkm01b.php?userId=10
+
 ※頭文字が「JR」以外なら「DT」をpassengerIdに付け足す
 
 
 頭文字が「JR」ならば、以下のようになる想定
+
 https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?userId=JR12345
 ```sh
 {
