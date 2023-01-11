@@ -22,7 +22,7 @@ Web申込フォームの新規作成
 
 ## 福祉moverリンク先URL
 - socialaction.php?ID={JRID}
-- 
+
 上記のようになるようしていただければと思います。
 
 
