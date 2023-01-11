@@ -33,14 +33,14 @@ basic認識のユーザー名、パスワードは１つのものを使用しま
 #### 「福祉moverリンク先」で、「外部で管理しているIDを APIで検索」をするときに使用するAPIの情報を貼っていただけますでしょうか。
 
 api情報
+
 ```sh
-https://ota.mws-hidaka.com/mover/public/test/user/passenger?userId={userId}
+実行api url 例 (basic認識、パラメータ込み)
+https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?userId=10
+
+basic認識
 ID : user01
 PW : QX8dRntuKabS
-```
-実行api url 例
-```sh
-https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?userId=10
 ```
 レスポンスJSONの例
 ```sh
@@ -68,9 +68,10 @@ JSONデータ
 - 頭文字が「JR」以外なら「DT」をレスポンスの"passengerId"に付け足す
 - basic認証は、DT{passengerId}:{password} をurlに付け足す
 ```sh
-https://mover.sao-jp.com/test/web/user/demanduser/demandkm01a.php?userId={passengerId}
+実行 url 例 (basic認識、パラメータ込み)
 https://DT10:12345@mover.sao-jp.com/test/web/user/demanduser/demandkm01b.php?userId=10
 ```
+
 質問
 - 上の例では「10」になっています。なぜ「DT10」ではないのですか？
 
@@ -81,7 +82,10 @@ https://DT10:12345@mover.sao-jp.com/test/web/user/demanduser/demandkm01b.php?use
 
 api情報
 ```sh
-https://@ota.mws-hidaka.com/mover/public/test/user/passenger?userId=JR12345
+実行api url 例 (basic認識、パラメータ込み)
+https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?userId=JR12345
+
+basic認識
 ID : user01
 PW : QX8dRntuKabS
 ```
@@ -108,8 +112,6 @@ JSONデータ
 
 - basic認証は、{passengerId}:{password} をurlに付け足す
 ```sh
-https://mover.sao-jp.com/test/web/user/demanduser/demandkm01a.php?userId={passengerId}
-
-実行 url 例 (basic認識、パラメータ)
+実行 url 例 (basic認識、パラメータ込み)
 https://JR12345:12345@mover.sao-jp.com/test/web/user/demanduser/demandkm01b.php?userId=JR12345
 ```
