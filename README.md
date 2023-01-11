@@ -21,6 +21,15 @@ Web申込フォームの新規作成
 - メール送信後、3ページ目表示(申込フォーム内容.docx)
 
 ## api
+
+### ドメイン
+
+「弊社リンク先」のドメインが「mover.sao-jp.com」です。
+ユーザー毎にbasic認識のユーザー名、パスワードが変わります。
+
+「api」のドメインが「ota.mws-hidaka.com」です。
+basic認識のユーザー名、パスワードは１つのものを使用します。
+
 #### 「福祉moverリンク先」で、「外部で管理しているIDを APIで検索」をするときに使用するAPIの情報を貼っていただけますでしょうか。
 
 api情報
@@ -29,12 +38,16 @@ https://ota.mws-hidaka.com/mover/public/test/user/passenger?userId={userId}
 ID : user01
 PW : QX8dRntuKabS
 ```
-実行api url
+実行api url 例
 ```sh
 https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?userId=10
 ```
 レスポンスJSONの例
 ```sh
+status code
+200 : 該当あり
+
+データ
 {
 "passengerId": "10",
 "password": "12345",
@@ -45,6 +58,8 @@ https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?
 "登録日": "2023-01-01",
 "permit": "0"
 }
+
+204 : 該当なし
 ```
 開発環境のDBなので、データが入っていません。
 データを入れましたらご連絡します。
@@ -57,6 +72,11 @@ https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?
 https://mover.sao-jp.com/test/web/user/demanduser/demandkm01a.php?userId={passengerId}
 https://DT10:12345@mover.sao-jp.com/test/web/user/demanduser/demandkm01b.php?userId=10
 ```
+質問
+- 上の例では「10」になっています。なぜ「DT10」ではないのですか？
+回答
+- basic認識のユーザー名を「DT10」にしており、DBの登録は「10」というようにしているからです。
+
 #### 頭文字が「JR」ならば、以下のようになる想定
 
 api情報
