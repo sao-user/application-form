@@ -46,8 +46,7 @@ https://user01:QX8dRntuKabS@ota.mws-hidaka.com/mover/public/test/user/passenger?
 ```sh
 status code
 200 : 該当あり
-
-データ
+JSONデータ
 {
 "passengerId": "10",
 "password": "12345",
@@ -74,6 +73,7 @@ https://DT10:12345@mover.sao-jp.com/test/web/user/demanduser/demandkm01b.php?use
 ```
 質問
 - 上の例では「10」になっています。なぜ「DT10」ではないのですか？
+
 回答
 - basic認識のユーザー名を「DT10」にしており、DBの登録は「10」というようにしているからです。
 
@@ -87,6 +87,9 @@ PW : QX8dRntuKabS
 ```
 レスポンスJSONの例
 ```sh
+status code
+200 : 該当あり
+JSONデータ
 {
 "passengerId": "JR12345",
 "password": "12345",
@@ -97,9 +100,16 @@ PW : QX8dRntuKabS
 "登録日": "2023-01-01",
 "permit": "0"
 }
+
+204 : 該当なし
 ```
+
+#### 頭文字が「JR」の時の「弊社リンク先」URL
+
 - basic認証は、{passengerId}:{password} をurlに付け足す
 ```sh
 https://mover.sao-jp.com/test/web/user/demanduser/demandkm01a.php?userId={passengerId}
+
+実行 url 例 (basic認識、パラメータ)
 https://JR12345:12345@mover.sao-jp.com/test/web/user/demanduser/demandkm01b.php?userId=JR12345
 ```
