@@ -34,8 +34,8 @@ function send_mail($data)
         $subject = "参加申込フォームの送信完了";
         $content = "群馬版MaaS サービス実証実験<br>";
         $content .= "参加申込フォームの送信完了<br><br>";
-        $content .= "外部ID:" . $applicantName . "<br>";
-        $content .= "申込者名:" . $externalId . "<br>";
+        $content .= "外部ID:" . $externalId . "<br>";
+        $content .= "申込者名:" . $applicantName . "<br>";
         $content .= "申込者フリガナ:" . $applicantFurigana . "<br>";
         $content .= "申込者連絡先:" . $applicantTel . "<br>";
 
@@ -72,7 +72,7 @@ function send_mail($data)
         //※名前などに日本語を使う場合は文字エンコーディングを変換
         //差出人アドレス, 差出人名
         $mail->setFrom('sao.mover@socialaction.net', mb_encode_mimeheader('群馬版MaaS サービス実証実験'));
-        //受信者アドレス, 受信者名（受信者名はオプション）
+        // 受信者アドレス, 受信者名（受信者名はオプション）
         $mail->addAddress('sao.mover@socialaction.net');
         //返信用アドレス（差出人以外に別途指定する場合）
         $mail->addReplyTo('sao.mover@socialaction.net', mb_encode_mimeheader('群馬版MaaS サービス実証実験'));

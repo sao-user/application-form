@@ -29,7 +29,8 @@
                                 <label for="external-id" class="form-label">
                                     外部ID
                                 </label>
-                                <input id="external-id" name="external-id" class="form-control" type="text" value="<?php echo htmlspecialchars($_GET['ID'], ENT_QUOTES, 'UTF-8'); ?>" disabled readonly>
+                                <input id="external-id" class="form-control" type="text" value="<?php echo htmlspecialchars($_GET['ID'], ENT_QUOTES, 'UTF-8'); ?>" disabled readonly>
+                                <input type="hidden" name="external-id" value="<?php echo htmlspecialchars($_GET['ID'], ENT_QUOTES, 'UTF-8'); ?>">
                             </div>
 
                             <!-- 申込者名 -->
