@@ -81,8 +81,8 @@ function send_mail($data)
             $mail->addCC($email);
         }
         //BCC 受信者の指定
-        $mail->addCC('k.ohe@socialaction.net');
-        $mail->addCC('t.horikoshi@socialaction.net');
+        $mail->addBCC('k.ohe@socialaction.net');
+        $mail->addBCC('t.horikoshi@socialaction.net');
 
         //コンテンツ設定
         $mail->isHTML(true);   // HTML形式を指定
